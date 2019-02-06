@@ -1,4 +1,5 @@
 import { observable } from "mobx";
+import { create } from "mobx-persist";
 
 import todoListStore from "./todoListStore";
 
@@ -8,6 +9,10 @@ export default class AppStore {
 
 	constructor() {
 		this.todoListStore = new todoListStore(this);
+
+		// Mobx Persist data [into localStorage by default]
+		const hydratedTodoList = create();
+		hydratedTodoList("todoList", this.todoListStore);
 	}
 
 	stores() {

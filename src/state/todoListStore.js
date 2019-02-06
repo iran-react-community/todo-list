@@ -1,13 +1,14 @@
 import { observable, computed, action, toJS } from "mobx";
+import { persist } from "mobx-persist";
 
 class TodoListStore {
-	@observable todos = [
+	@persist("list") @observable todos = [
 		{ value: "Get groceries for dinner", done: true },
 		{ value: "Pick up Amit's Birthday present", done: false },
 		{ value: "Book flights to Vancouver", done: false },
 		{ value: "Finilize presentation", done: false },
 	];
-	@observable filteredTodo = [];
+	@persist("list") @observable filteredTodo = [];
 
 	constructor() {
 		this.filteredTodo = this.todos;

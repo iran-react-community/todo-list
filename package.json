@@ -2,15 +2,19 @@
 	"name": "todolist",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://ali-master.github.io/todo-list/",
 	"scripts": {
 		"start": "node scripts/start.js",
 		"build": "node scripts/build.js",
-		"test": "node scripts/test.js"
+		"test": "node scripts/test.js",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"dependencies": {
 		"@emotion/core": "^10.0.7",
 		"@emotion/styled": "^10.0.7",
 		"antd": "^3.13.2",
+		"gh-pages": "^2.0.1",
 		"lodash": "^4.17.11",
 		"mobx": "^5.9.0",
 		"mobx-persist": "^0.4.1",

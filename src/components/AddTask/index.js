@@ -16,6 +16,8 @@ class AddTask extends React.PureComponent {
 	}
 
 	onSearch(value) {
+		if(!value) return;
+		
 		this.props.onChange(value);
 
 		this.refs.todoInput.input.input.value = "";

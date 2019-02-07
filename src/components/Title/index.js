@@ -7,7 +7,7 @@ import { GradTealBlue } from "../Colors";
 const Wrap = styled.div`
 	text-align: center;
 	font-size: 1.3em;
-	width: 50%;
+	width: 65%;
 	margin: 10px auto;
 	color: #373352;
 	font-weight: 300;

@@ -6,7 +6,7 @@ A simple and small todo list application built with:
 - Webpack 4 _for module bundling_
 - EmotionJS _for using css-in-js_
 
-Demo: https://ali-master.github.io/todo-list/
+Demo: https://iran-react-community.github.io/todo-list/
 
 Regards to [TodoMVC](http://todomvc.com)
 

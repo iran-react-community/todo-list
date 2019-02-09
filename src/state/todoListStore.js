@@ -51,7 +51,7 @@ class TodoListStore {
 
 	// Filter todo list via by status argv.
 	@action filterTasksBy = status => {
-		this.todos = this.todos.filter(({ done }) => {
+		this.filteredTodo = this.todos.filter(({ done }) => {
 			switch (status) {
 				case "completed":
 					return Boolean(done);
@@ -61,8 +61,6 @@ class TodoListStore {
 					return true;
 			}
 		});
-
-		this.filteredTodo = this.todos;
 	};
 }
 

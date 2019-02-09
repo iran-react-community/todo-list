@@ -27,7 +27,7 @@ class BootCamp extends Component {
 							<TodoList />
 						</Wrapper>
 					</Content>
-					<Footer style={{ textAlign: "center" }}>Made with Love by Ali Torki</Footer>
+					<Footer style={{ textAlign: "center" }}>Made with Love by <a href="https://github.com/ali-master" target="_new" rel="follow">Ali Torki</a></Footer>
 				</Layout>
 			</Layout>
 		);

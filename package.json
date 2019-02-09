@@ -1,8 +1,16 @@
 {
 	"name": "todolist",
-	"version": "0.1.0",
-	"private": true,
-	"homepage": "https://ali-master.github.io/todo-list/",
+	"version": "1.0.0",
+	"homepage": "https://iran-react-community.github.io/todo-list/",
+	"repository": {
+		"type": "git",
+		"url": "git+https://iran-react-community.github.io/todo-list.git"
+	},
+	"author": "Ali Torki <ali_4286@live.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://iran-react-community.github.io/todo-list/issues"
+	},
 	"scripts": {
 		"start": "node scripts/start.js",
 		"build": "node scripts/build.js",

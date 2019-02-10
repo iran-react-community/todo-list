@@ -38,7 +38,7 @@ class TodoListStore {
 	};
 	// Delete all completed tasks
 	@action deleteCompletedTasks = () => {
-		this.todos = this.todos.filter(({ done }) => !!done);
+		this.todos = this.todos.filter(({ done }) => !done);
 
 		this.filteredTodo = this.todos;
 	};

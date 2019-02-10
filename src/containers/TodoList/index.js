@@ -64,7 +64,6 @@ class TaskList extends Component {
 
 	render() {
 		const { todoList } = this.props;
-		console.log(this.props);
 
 		return (
 			<Fragment>

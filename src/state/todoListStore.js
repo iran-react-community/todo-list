@@ -6,7 +6,7 @@ class TodoListStore {
 		{ value: "Get groceries for dinner", done: true },
 		{ value: "Pick up Amit's Birthday present", done: false },
 		{ value: "Book flights to Vancouver", done: false },
-		{ value: "Finilize presentation", done: false },
+		{ value: "Finalize presentation", done: false },
 	];
 	@persist("list") @observable filteredTodo = [];
 
@@ -23,6 +23,11 @@ class TodoListStore {
 	@computed
 	get getNumberOfActiveTasks() {
 		return toJS(this.filteredTodo.filter(({ done }) => !done)).length;
+	}
+	// get length of active todos
+	@computed
+	get getNumberOfCompletedTasks() {
+		return toJS(this.filteredTodo.filter(({ done }) => !!done)).length;
 	}
 	// Update a task which it was done status by index
 	@action updateTaskStatus = ({ index, done }) => {
@@ -54,9 +59,9 @@ class TodoListStore {
 		this.filteredTodo = this.todos.filter(({ done }) => {
 			switch (status) {
 				case "completed":
-					return Boolean(done);
+					return !!done;
 				case "active":
-					return !Boolean(done);
+					return !done;
 				default:
 					return true;
 			}

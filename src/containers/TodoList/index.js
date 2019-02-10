@@ -48,7 +48,7 @@ class TaskList extends Component {
 		this.props.todoList.deleteCompletedTasks();
 	}
 	/**
-	 * Change tasks fileter to "uncompleted", "active" or "all"
+	 * Change tasks filter to "uncompleted", "active" or "all"
 	 * @param {String} filter
 	 */
 	onChangeFilter(filter) {
@@ -64,6 +64,7 @@ class TaskList extends Component {
 
 	render() {
 		const { todoList } = this.props;
+		console.log(this.props);
 
 		return (
 			<Fragment>
@@ -76,11 +77,11 @@ class TaskList extends Component {
 				<Map data={todoList.getTaskList} name="todo">
 					<List onChange={this.onChangeTask} onDelete={this.onDeleteTask} />
 				</Map>
-				<Maybe condition={todoList.getTaskList.length === 0}>
+				<Maybe condition={!todoList.getTaskList.length}>
 					<Empty />
 				</Maybe>
 
-				<Button type="danger" icon="delete" onClick={this.deleteCompletedTasks}>
+				<Button disabled={!todoList.getNumberOfCompletedTasks} type="danger" icon="delete" onClick={this.deleteCompletedTasks}>
 					Delete all completed tasks
 				</Button>
 			</Fragment>

@@ -24,7 +24,7 @@ class TodoListStore {
 	get getNumberOfActiveTasks() {
 		return toJS(this.filteredTodo.filter(({ done }) => !done)).length;
 	}
-	// get length of active todos
+	// get length of completed todos
 	@computed
 	get getNumberOfCompletedTasks() {
 		return toJS(this.filteredTodo.filter(({ done }) => !!done)).length;
